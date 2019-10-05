@@ -29,5 +29,11 @@ window.addEventListener('load', function(){
 		clearInterval(tiempo);
 
 		alert("Detuviste el interval");
+
+
+		//Tambien se puede acceder a el boton stop con la variable "this"
+
+
+		//this.addEventListener...
 });
 });

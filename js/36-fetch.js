@@ -41,7 +41,10 @@ fetch('https://jsonplaceholder.typicode.com/todos/28')
   				  		mostrarJanet(user.data[0]);
 
   				  		
-
+  				  		//Cargar o mostrar error en las promesas se usa el
+  				  		//metodo catch parecido que en php
+  				  }).catch(error => {
+  				  	console.log(error + "Error JavScript!");
   				  });
 
   	function getJanet(){

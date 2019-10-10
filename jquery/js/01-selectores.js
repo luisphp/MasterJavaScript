@@ -54,6 +54,13 @@ $(document).ready(function(){
 		$('[title="Google"]').css('background','#ccc');
 		$('[title="Facebook"]').css('background','blue');
 
+		//Otros selectores
+
+		//$('p').addClass('magen-superior');
+
+		console.log($("#caja").find('.resaltado'));
+
+
 
 
 });

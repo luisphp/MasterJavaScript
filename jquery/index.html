@@ -24,21 +24,43 @@
 			.grande{
 					font-size: 100px;
 					}
+			.margen-superior{
+					margin-top: 45px;
+					display: block;
+			}
+			.resaltado{
+				border-bottom: 2px solid brown; 
+			}		
 		</style>
 	</head>
 	<body>
 		<div class="container">
 			<h4>Jquery</h4>
 			<p id="rojo" class="zebra grande">Rojo</p>
-			<p id="amarillo" class="zebra">Amarillo</p>
+			<p id="amarillo" class="zebra margen-superior">Amarillo</p>
 			<p id="verde">verde</p>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 			consequat.</p>
 
+			<div id="caja">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+			<ul>
+				<li>Elemento1</li>
+				<li class="resaltado">Elemento2</li>
+			</ul>
+			
+
+		</div>
+
 			<p href="google.com" title="Google">Google</p>
 		</div>
 		<script type="text/javascript" src="js/01-selectores.js"></script>
 	</body>
 </html>
+
+<!--
+https://www.udemy.com/course/master-en-frameworks-javascript-aprende-angular-react-vue-js/?couponCode=FMJS-YT
+
+-->

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Jquery</title>
+		
+		<!--Jquery -->
+		<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+
+		<!--CSS Style Jquery UI-->
+		<link rel="stylesheet" href="js/jquery-ui/jquery-ui.min.css">
+		<link rel="stylesheet" href="js/jquery-ui/jquery-ui.structure.css">
+		<link rel="stylesheet" href="js/jquery-ui/jquery-ui.theme.css">
+
+		<!--Jquery UI-->
+		<script type="text/javascript" src="js/jquery-ui/jquery-ui.min.js"></script>
+
+		<!--Tu script Jquery-->
+		<script type="text/javascript" src="js/06-jqueryUI.js"></script>
+		<!--CSS Style-->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<!--JavaScript CSS-->
+		<!--
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>-->
+		<style type="text/css">
+
+		.elemento{
+			width: 300px;
+			height: 200px;
+			border: 4px solid black;
+			background: lightblue;
+			margin: 20px;
+			float: left;
+		}
+		.lista_seleccionable li{
+			width: 80%;
+			padding: 20px;
+			border: 1px solid #ccc;
+			list-style: none;
+			cursor: pointer;
+		}
+		ul .ui-selecting{
+			background: green;
+
+		}
+		ul .ui-selected{
+			background: blue;
+			
+		}
+		#elemento_movido{
+			width: 300px;
+			height: 200px;
+			border: 4px solid red;
+		}
+		#area{
+			width: 300px;
+			height: 300px;
+			border: 4px solid green;
+		}
+		.elemento{
+			background: pink;
+			float: none;
+			display: none;
+		}
+
+		</style>
+		
+	</head>
+	<body>
+		<div class="container">
+
+		<h2 title="Esta pagina esta usando jquery UI">Jquery UI</h2>
+
+
+		<hr>
+		<h4 title="Date picker">Date picker</h4>
+		<br>
+		<p>Date: <input type="text" id="datepicker"></p>
+		<hr>
+		<h4>Cuadro de dialogo</h4>
+		<br>
+		<div id="dialog" title="Basic dialog">
+		  <p>This is the default dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.</p>
+		</div>
+		<hr>
+		<h4>Efectos Jquery UI</h4>
+		<button id="mostrar" class="btn btn-success">Mostrar</button>
+
+		<div class="caja-efectos elemento"></div>
+		<hr>
+		<h4>Droppable</h4>
+		<br>
+		<div id=elemento_movido></div>
+		<br>
+		<div id="area"></div>
+		<hr>
+		<h4>Sortable</h4>
+
+		<ul class="lista_seleccionable">
+				<li>GTA 5</li>
+				<li>Need For Speed</li>
+				<li>Mario</li>
+				<li>Galaxian</li>
+
+		</ul>
+		<hr>
+		<h4>Draggable</h4>
+		
+			
+			<div class="elemento card">
+				
+				Elemento 1
+
+			</div>
+
+			<div class="elemento card">
+				
+				Elemento 2
+
+			</div>
+
+			<div class="elemento card">
+				
+				Elemento 3
+
+			</div>
+			
+		
+		</div>
+		<!--
+		https://1fichier.com/?139qp7d49r
+		https://1fichier.com/?vw1fpd7isb
+		http://dclinks.info/index.php?v=2607 -->
+	</body>
+</html>

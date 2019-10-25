@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>POO y TypeScript</title>
+
+	<!--CSS Style-->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+		
+		<!--<script type="text/javascript" src="js/02-hello.js"></script>-->
+		<script type="text/javascript" src="js/04-funciones.js"></script>
+</head>
+<body>
+
+		<h2 id="precio">Precio: </h2>
+		<br>
+
+		<label for="exampleFormControlSelect1">Example select</label>
+    	<select class="form-control col-md-1" id="select" onchange="Optionselection (this)">
+		      <option>1</option>
+		      <option>2</option>
+		      <option>3</option>
+		      <option>4</option>
+		      <option>5</option>
+    	</select>
+
+    	<script type="text/javascript">
+    		
+    		function Optionselection(select) { 
+            var chosen = select.options[select.selectedIndex]; 
+            //alert("Option Chosen by you is " + chosen.value); 
+
+			var hache = document.getElementById("precio");
+
+			hache.innerHTML = chosen.value *3;
+        } 
+
+
+
+    		
+				
+
+    	</script>
+
+
+</body>
+</html>

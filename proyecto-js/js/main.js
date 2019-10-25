@@ -135,7 +135,7 @@
       
     }
 
-    //Validacion de formulario con la libreria form validator que se copio
+    //Validacion de formulario con la libreria form-validator que se copio
     //y pego como CDN
 
     if(window.location.href.indexOf('contact') > -1){

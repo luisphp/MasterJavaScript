@@ -7,24 +7,48 @@
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 		
-		<!--<script type="text/javascript" src="js/02-hello.js"></script>-->
+		<!--<script type="text/javascript" src="js/02-hello.js"></script>x
 		<script type="text/javascript" src="js/04-funciones.js"></script>
-</head>
+		<script type="text/javascript" src="js/camisetas.js"></script>-->
+		<script type="text/javascript" src="js/camisetas.js"></script>
+
+	</head>
+
+
+<style type="text/css">
+	
+	.azul{
+
+			background: rgb(2,0,36);
+			background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+
+	}
+
+	.naranja{
+
+		background: rgb(232,233,18);
+		background: linear-gradient(292deg, rgba(232,233,18,1) 0%, rgba(245,114,6,1) 100%);
+	}
+
+
+
+</style>
 <body>
+	<div class="naranja" style="height: 65px;"></div>
 
-		<h2 id="precio">Precio: </h2>
-		<br>
+		<div class="col-md-12">
+			
+			<div class="col-md-12 azul center-block" style="height: 180px; margin-top: 20px; max-width: 900px; ">Banner</div>
 
-		<label for="exampleFormControlSelect1">Example select</label>
-    	<select class="form-control col-md-1" id="select" onchange="Optionselection (this)">
-		      <option>1</option>
-		      <option>2</option>
-		      <option>3</option>
-		      <option>4</option>
-		      <option>5</option>
-    	</select>
+			<div class=""></div>
+
+		</div>
+
+
 
     	<script type="text/javascript">
+
+
     		
     		function Optionselection(select) { 
             var chosen = select.options[select.selectedIndex]; 
@@ -32,14 +56,9 @@
 
 			var hache = document.getElementById("precio");
 
-			hache.innerHTML = chosen.value *3;
+			hache.innerHTML = chosen.value * 3;
         } 
-
-
-
-    		
-				
-
+        
     	</script>
 
 

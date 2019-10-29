@@ -1,0 +1,15 @@
+<div>
+
+ <h1>Bienvenido a {{titles}}!</h1>
+ <button (click)="ocultarVidejuegos(false)" *ngIf="mostrar_videjuegos">Ocultar Videjuegos Component</button>
+ <button (click)="ocultarVidejuegos(true)" *ngIf="!mostrar_videjuegos">Mostrar Videjuegos Component</button>
+
+  <videojuegos *ngIf="mostrar_videjuegos"></videojuegos>
+  
+  <br>
+  <zapatillas></zapatillas>
+  <hr>
+  <cursos></cursos>
+
+  
+</div>

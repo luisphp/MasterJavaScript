@@ -1,11 +1,23 @@
 //Interfaces
 
 interface CamisetaBase{
-	setColor(color:string):string;
-	getColor(color:string):string;
+	setColor(color:string);
+	getColor(color:string);
 }
 
+//Decoradores
+//Solo se añade funcionalidad a una clase
+function estampar(logo:string){
+	return function(target: Function){
+		target.prototype.estampacion = function():void{
+			console.log("Camiseta estampada con el logo de mi equipo"+logo);
+		}
+	}
+}
+
+
 //Clases
+@estampar('Gucci Gang')
 class Camiseta implements CamisetaBase{
 
 	//Propiedades
@@ -84,10 +96,15 @@ class Sudadera extends Camiseta{
 		this.capucha = capucha;
 	}
 
-	getCapucha:boolean{}
+	getCapucha(){
 		this.capucha;
 	}
 }
 
 var camiseta = new Camiseta("fas", "fas", "fas", "L", 12);
 console .log(camiseta);
+camiseta.estampacion();
+
+var sudadera = new Sudadera("fas", "fas", "fas", "L", 12);
+console.log(sudadera);
+

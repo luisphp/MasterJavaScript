@@ -1,15 +1,32 @@
-<div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <!--CSS Bootstrap 4.3-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+</head>
+<body class="bg-light">
+  <div class="container bg-white">
 
- <h1>Bienvenido a {{titles}}!</h1>
- <button (click)="ocultarVidejuegos(false)" *ngIf="mostrar_videjuegos">Ocultar Videjuegos Component</button>
- <button (click)="ocultarVidejuegos(true)" *ngIf="!mostrar_videjuegos">Mostrar Videjuegos Component</button>
+    <h1 class="text-center">Bienvenido a {{titles}}!</h1>
+    <hr>
+    <button (click)="ocultarVidejuegos(false)" *ngIf="mostrar_videjuegos" class="btn btn-primary shadow col-md-12">Ocultar Videjuegos Component</button>
 
-  <videojuegos *ngIf="mostrar_videjuegos"></videojuegos>
-  
-  <br>
-  <zapatillas></zapatillas>
-  <hr>
-  <cursos></cursos>
+    <button (click)="ocultarVidejuegos(true)" *ngIf="!mostrar_videjuegos" class="btn btn-primary shadow col-md-12">Mostrar Videjuegos Component</button>
 
-  
-</div>
+   
+     <videojuegos *ngIf="mostrar_videjuegos"></videojuegos>
+     
+     <zapatillas></zapatillas>
+   
+   
+     
+   </div>
+</body>
+</html>
+
+

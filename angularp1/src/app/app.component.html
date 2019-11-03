@@ -9,9 +9,44 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
 </head>
+    <style>
+      
+        .active{
+          font-size: 20px;
+        }
+      
+    </style>
 <body class="bg-light">
   <div class="container bg-white">
 
+
+    <!--NavBar Bootstrap 4-->
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+    <a class="navbar-brand" [routerLink]="['/']">Angular!</a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse">
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" [routerLink]="['/zapatillas']" [routerLinkActive]="['active']">Zapatillas</a>
+
+        <a class="nav-item nav-link" [routerLink]="['/videjuegos']" [routerLinkActive]="['active']">Videjuegos</a>
+
+        <a class="nav-item nav-link" [routerLink]="['/cursos']" [routerLinkActive]="['active']">Cursos</a>
+
+      </div>
+    </div>
+  </nav>
+  <!--End NavBar-->
+
+  <!--Start Routes-->
+    <router-outlet></router-outlet>
+
+
+
+    <!--
     <h1 class="text-center">Bienvenido a {{titles}}!</h1>
     <hr>
     <button (click)="ocultarVidejuegos(false)" *ngIf="mostrar_videjuegos" class="btn btn-primary shadow col-md-12">Ocultar Videjuegos Component</button>
@@ -22,7 +57,7 @@
      <videojuegos *ngIf="mostrar_videjuegos"></videojuegos>
      
      <zapatillas></zapatillas>
-   
+      -->
    
      
    </div>

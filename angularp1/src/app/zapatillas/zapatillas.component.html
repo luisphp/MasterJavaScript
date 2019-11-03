@@ -9,8 +9,45 @@
    		<li *ngFor="let zapatilla of zapatillas">{{zapatilla.name}} - {{zapatilla.price}}</li>
 	</ul>
 	<h5>Marcas</h5>
-	<ul *ngFor="let marca of marcas">
-	    <li>{{marca}}</li>
+	<ul *ngFor="let marca of marcas; let index = index">
+	    <li>{{index + ' - ' + marca}}
+	    <span><button class="btn btn-secondary" (click)="deleteBrand(index)">Borrar</button></span></li>
 	</ul>
 
-</div>
+
+	<!--Jugando con los colores de las marcas-->
+	<p> EL color de la mayoria de nuestras zapatillas es</p>
+
+	<div class="form-group">
+	<p>Cambiar Color:</p>
+    <input type="text" class="form-control" [(ngModel)]="color">
+	 
+	</div>
+
+	<ul [ngSwitch]="color">
+	    <li *ngSwitchCase="'yellow'">
+	    	<span class="badge badge-warning">Amarillo</span>
+	    </li>
+	    <li *ngSwitchCase="'green'">
+	    	<span class="badge badge-success">Verde</span>
+	    </li>
+	    <li *ngSwitchCase="'blue'">
+	    	<span class="badge badge-primary">Azul</span>
+	    </li>
+	    <li *ngSwtichDefault><span class="badge badge-secondary">No funciona</span></li>
+	    
+	</ul>
+	<br>
+
+	<!--Two way data binding, se muestran los datos de forma reactiva en el componente.-->
+	<div class="form-group">
+	<p>Añadir Marca:</p>
+    <input type="text" class="form-control" [(ngModel)]="mi_marca" (blur)="onBlur()" (keyup.enter)="mostrarPalabra()">
+
+     <p> {{mi_marca}}</p>
+	  </div>
+	  <button type="submit" class="btn btn-primary" (click)="getBrand()">Submit</button>
+	  <br>
+	  <button type="submit" class="btn btn-success" (click)="addBrand()">Add Marca</button>
+
+	</div>

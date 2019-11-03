@@ -2,6 +2,8 @@ import {Component} from '@angular/core';
 import {Zapatilla} from '../models/zapatilla';
 
 
+
+
 @Component({
     
     selector: 'zapatillas',
@@ -15,6 +17,8 @@ export class ZapatillasComponent{
     public listado: string;
     public zapatillas: Array<Zapatilla>;
     public marcas: String[];
+    public color: String;
+    public mi_marca: Array<string>;
 
 
      constructor(){
@@ -25,13 +29,13 @@ export class ZapatillasComponent{
         this.marcas = new Array;
         //Zapatillas
         this.zapatillas =[
-            new Zapatilla('Reebock Classic', 'Reebock', 'Blancos', 100,70),
-            new Zapatilla('Nike', 'Nikes', 'Red Product', 90,40),
-            new Zapatilla('rs21', 'adidas', 'Red Product', 50,30),
-            new Zapatilla('Adidas', 'Nikes', 'Red Product', 40,20),
-            new Zapatilla('Nike rs21', 'adidas', 'Red Product', 30,10),
+            new Zapatilla('Reebock Classic', 'Reebock', 'verde', 100,70),
+            new Zapatilla('Nike', 'Nikes', 'blue', 90,40),
+            new Zapatilla('rs21', 'adidas', 'verde', 50,30),
+            new Zapatilla('Adidas', 'Nikes', 'yellow', 40,20),
+            new Zapatilla('Nike rs21', 'adidas', 'cyan', 30,10),
        ];
-
+       this.color = "green";
      }
 
      ngOnInit(){
@@ -48,4 +52,27 @@ export class ZapatillasComponent{
 
         console.log(this.marcas);
      }
+
+     getBrand(){
+        alert(this.mi_marca);
+     }
+
+     addBrand(){
+        this.marcas.push(this.mi_marca);
+     }
+
+     deleteBrand(index){
+        //delete this.marcas[index];
+        this.marcas.splice(index,1);
+     }
+
+     onBlur(){
+        console.log("Has salido del input");
+     }
+
+     mostrarPalabra(){
+        alert(this.mi_marca);
+             }
+
+
 }

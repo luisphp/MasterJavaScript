@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { VideojuegosComponent } from './videojuegos/videojuegos.component';
 import { ZapatillasComponent } from './zapatillas/zapatillas.component';
 import { CursosComponent } from './cursos/cursos.component';
+import {FormsModule} from '@angular/forms';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -12,10 +14,12 @@ import { CursosComponent } from './cursos/cursos.component';
     VideojuegosComponent,
     ZapatillasComponent,
     CursosComponent,
+    HomeComponent,
     
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

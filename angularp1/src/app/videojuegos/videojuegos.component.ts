@@ -1,6 +1,6 @@
 import {Component, OnInit, DoCheck, OnDestroy } from '@angular/core';
 import {Configuracion} from '../models/configuracion';
-import {Zapatilla} from '../models/zapatilla';
+
 
 @Component({
     
@@ -14,7 +14,7 @@ export class VideojuegosComponent implements OnInit, DoCheck, OnDestroy{
     public titulo: string;
     public listado: string;
     public color:string;
-    public zapatillas: Array<Zapatilla>;
+    
     
      constructor(){
         console.log("Se ha cargado el componente: videojuego.component.ts");
@@ -24,25 +24,21 @@ export class VideojuegosComponent implements OnInit, DoCheck, OnDestroy{
 
         this.color = Configuracion.color;
 
-        //Zapatillas
-        this.zapatillas =[
-             new Zapatilla('Reebock Classic', 'Reebock', 'Blancos', 100,70),
-             new Zapatilla('Nike rs21', 'Nikes', 'Red Product', 90,30),
-        ];
+        
         
 
 
      }
      ngOnDestroy(){
-         console.log("On destroy ejecutado");
+         //console.log("On destroy ejecutado");
      }
 
      ngDoCheck(){
-         console.log("DoCheck ejecutado");
+         //console.log("DoCheck ejecutado");
      }
 
      ngOnInit(){
-         console.log(this.zapatillas);
+         //console.log(this.zapatillas);
      }
 
      cambiarTitulo(){

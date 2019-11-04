@@ -1,1 +1,24 @@
-<p>home works!</p>
+<div class="bg-white card shadow card-body" style="margin-top: 20px; border-color:darkorange;">
+
+    <h2 style="font-family: 'ZCOOL XiaoWei', serif;">Componente Home </h2>
+
+    <div *ngIf="identificado; then siIdentificado else noIdentificado">  </div>
+
+    <ng-template #siIdentificado>
+
+            <p>Estas identificado!!!  </p>
+
+        <button (click)="setIdentificado(false)" class="btn btn-danger col-md-2">Salir del identificador</button>
+
+    </ng-template>
+    
+    <ng-template #noIdentificado>
+
+        <p>No estas identificado, pulsa el boton para identificarte</p>
+
+        <button (click)="setIdentificado(true)" class="btn btn-primary col-md-2">Identificarse</button>
+
+
+    </ng-template>
+              
+</div>

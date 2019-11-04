@@ -1,9 +1,13 @@
 <div class="bg-white card shadow card-body" style="margin-top: 20px; border-color: lawngreen;">
 
     <h2 style="font-family: 'ZCOOL XiaoWei', serif;">Componente de Cursos </h2>
+    <br>
+    <button (click)="redirigir()" class="btn btn-primary col-md-3">Ir a Zapatillas</button>
+    <br>
     <div class="container">
         
-        <h6>Parametro recibido por URL: <span>{{nombre}}</span></h6>
+        <h6 *ngIf="nombre">Parametro recibido por URL: <span>{{nombre}}</span></h6>
+        <h6 *ngIf="!nombre">No ha pasado parametros</h6>
         
     </div>
 </div>

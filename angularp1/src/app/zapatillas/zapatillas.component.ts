@@ -2,12 +2,17 @@ import {Component} from '@angular/core';
 import {Zapatilla} from '../models/zapatilla';
 
 
+import {ZapatillaService} from '../services/zapatilla.service';
+
 
 
 @Component({
     
     selector: 'zapatillas',
     templateUrl: './zapatillas.component.html',
+    providers: [
+       ZapatillaService
+    ]
 
 })
 export class ZapatillasComponent{
@@ -21,25 +26,32 @@ export class ZapatillasComponent{
     public mi_marca: Array<string>;
 
 
-     constructor(){
+    
+    
+
+
+     constructor(private _zapatillaService: ZapatillaService){
         console.log("Se ha cargado el componente: zapatillas.component.ts");
 
         var ElTitulo = this.titulo = "Este es el componente de Zapatillas en Angular";
         var ElListado = this.listado = "Esta es la lista de componentes de zapatillas en Angular";
         this.marcas = new Array;
         //Zapatillas
-        this.zapatillas =[
+        /*this.zapatillas =[
             new Zapatilla('Reebock Classic', 'Reebock', 'verde', 100,70),
             new Zapatilla('Nike', 'Nikes', 'blue', 90,40),
             new Zapatilla('rs21', 'adidas', 'verde', 50,30),
             new Zapatilla('Adidas', 'Nikes', 'yellow', 40,20),
             new Zapatilla('Nike rs21', 'adidas', 'cyan', 30,10),
-       ];
-       this.color = "green";
+       ];*/
+       this.color = "green";    
      }
 
      ngOnInit(){
-        console.log(this.zapatillas);
+        //console.log(this.zapatillas);
+        
+        this.zapatillas = this._zapatillaService.getZapatillas();
+
         this.getMarcas();
      }
 
@@ -74,5 +86,6 @@ export class ZapatillasComponent{
         alert(this.mi_marca);
              }
 
+        
 
 }

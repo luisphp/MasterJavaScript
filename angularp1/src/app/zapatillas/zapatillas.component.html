@@ -44,10 +44,11 @@
 	<p>Añadir Marca:</p>
     <input type="text" class="form-control" [(ngModel)]="mi_marca" (blur)="onBlur()" (keyup.enter)="mostrarPalabra()">
 
-     <p> {{mi_marca}}</p>
+	 <p> {{mi_marca}}</p>
+	 <br>
 	  </div>
 	  <button type="submit" class="btn btn-primary" (click)="getBrand()">Submit</button>
 	  <br>
-	  <button type="submit" class="btn btn-success" (click)="addBrand()">Add Marca</button>
+	  <button type="submit" class="btn btn-success" (click)="addBrand(mi_marca)">Add Marca</button>
 
 	</div>

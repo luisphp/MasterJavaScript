@@ -57,8 +57,8 @@ export class ZapatillasComponent{
         alert(this.mi_marca);
      }
 
-     addBrand(){
-        this.marcas.push(this.mi_marca);
+     addBrand(la_marca:string){
+        this.marcas.push(la_marca);
      }
 
      deleteBrand(index){

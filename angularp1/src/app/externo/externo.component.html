@@ -1,1 +1,40 @@
-<p>externo works!</p>
+<div class="bg-white card shadow card-body" style="margin-top: 20px; border-color:indigo;">
+
+    <h2 style="font-family: 'ZCOOL XiaoWei', serif;">Componente Peticiones Ajax </h2>
+
+    <!--Implementando Pipes-->
+    <hr>
+    <!--Implementando Pipes Generico-->
+    {{fecha | date:'fullDate'}}
+    <hr>
+    <!--Implementando Personalizado-->
+    {{4 | calculadora: 4}}
+    <hr>
+
+    <input class="form form-control col-md-3" placeholder="Escribe el ID del usuario" type="text" 
+    [(ngModel)]="id_otorgado" (keyup.enter)="cargaUsuario()"> 
+    <br>
+    <div *ngIf="!first_name">
+        <img [src]=./assets/Eclipse-1s-200px.gif" alt="" style="max-width: 250px;">
+    </div>
+
+    <br>
+    <div *ngIf="id_user; else SinConexion">
+
+    
+    <img src="{{avatar}}" alt="" style="max-width: 150px;">
+    <br>
+    <h6>{{id_user}}</h6>
+    <h6>{{first_name}}</h6>
+    <h6>{{last_name}}</h6>
+    <br>
+
+    </div>
+
+    <ng-template #SinConexion>
+
+        <h5>Verifica la URL</h5>
+
+    </ng-template>
+    
+</div>

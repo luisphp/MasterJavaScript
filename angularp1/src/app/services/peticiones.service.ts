@@ -11,14 +11,12 @@ export class PeticionesService{
 
         public _http: HttpClient
 
-
-
     ){
         this.url = 'https://reqres.in/';
     }
 
-    getUser(): Observable<any>{
-        return this._http.get(this.url+'api/users?page=2');
+    getUser(id_otorgado): Observable<any>{
+        return this._http.get(this.url+'api/users?page=2&id='+id_otorgado);
     }
 
 }

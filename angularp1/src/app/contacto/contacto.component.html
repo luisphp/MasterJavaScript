@@ -1,32 +1,29 @@
 <div class="bg-white card shadow card-body" style="margin-top: 20px; border-color:yellowgreen">
-
-        <h2 style="font-family: 'ZCOOL XiaoWei', serif;">Componente de Formulario - Contacto </h2>
-
-        <form class="col-md-6" #formContacto="ngForm" (ngSubmit)="onSubmit()">
-
-                <div class="form-group">
-                    <label for="name">Name </label>
-                    <input type="name" class="form-control" name="name" placeholder="Name">
-                </div>
-                
-                <div class="form-group">
-                    <label for="lastName">Last Name </label>
-                    <input type="email" class="form-control" name="lastName" placeholder="LastName">
-                </div>
-
-                <div class="form-group">
-                    <label for="email">Email </label>
-                    <input type="email" class="form-control" name="email" placeholder="Email">
-                </div>
-
-                <div class="form-group">
-                        <label for="message">Message </label>
-                        <input type="text" class="form-control" name="message" placeholder="Message">
-                </div>
-
-                
-
-                <button type="submit" class="btn btn-primary">Enviar</button>
-        </form>
+    <h2 style="font-family: 'ZCOOL XiaoWei', serif;">Componente de Formulario - Contacto </h2>
+    <form class="col-md-6" #formContacto="ngForm" (ngSubmit)="onSubmit(formContacto)">
+        <div class="form-group">
+            <label for="name">Name </label>
+            <input type="name" class="form-control" name="name" placeholder="Name" #name="ngModel" [(ngModel)]="usuario.name" required pattern="[a-z A-Z]+">
+            <span *ngIf="name.touched && !name.valid" class="badge badge-warning">Obligatorio</span>
+        </div>
         
-    </div>
+        <div class="form-group">
+            <label for="lastName">Last Name </label>
+            <input type="email" class="form-control" name="lastName" placeholder="LastName" #lastName="ngModel" [(ngModel)]="usuario.lastName" required pattern="[a-z A-Z]+">
+            <span *ngIf="lastName.touched && !lastName.valid" class="badge badge-warning">Obligatorio</span>
+        </div>
+        <div class="form-group">
+            <label for="email">Email </label>
+            <input type="email" class="form-control" name="email" placeholder="Email" #email="ngModel" [(ngModel)]="usuario.email" required>
+            <span *ngIf="email.touched && !email.valid" class="badge badge-warning">Obligatorio</span>
+        </div>
+        <div class="form-group">
+            <label for="message">Message </label>
+            <input type="text" class="form-control" name="message" placeholder="Message" #message="ngModel" [(ngModel)]="usuario.message" required>
+            <span *ngIf="message.touched && !message.valid" class="badge badge-warning">Obligatorio</span>
+        </div>
+        
+        <button type="submit" class="btn btn-primary" [disabled]="!formContacto.form.valid">Enviar</button>
+    </form>
+    
+</div>

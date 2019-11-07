@@ -11,6 +11,8 @@ export class ContactoComponent implements OnInit {
 
   public usuario: ContactoUsuario;
 
+  
+
   constructor() { 
 
     this.usuario = new ContactoUsuario('','','','');
@@ -22,8 +24,10 @@ export class ContactoComponent implements OnInit {
   ngOnInit() {
   }
 
-  onSubmit(){
-    console.log("Evento Submit lanzado");
+  onSubmit(formContacto){
+    //console.log("Evento Submit lanzado");
+    formContacto.reset();
+    console.log(this.usuario);
   }
 
 }

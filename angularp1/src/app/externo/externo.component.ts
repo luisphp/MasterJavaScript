@@ -18,6 +18,9 @@ export class ExternoComponent implements OnInit {
 
   public id_otorgado: any;
 
+
+  public new_user: any;
+
   constructor(
 
     private _PeticionesService: PeticionesService,
@@ -28,6 +31,13 @@ export class ExternoComponent implements OnInit {
     this.first_name = false;
     this.cargaUsuario();
     this.fecha = new Date();
+
+    this.new_user =  
+    {
+    "name": "",
+    "job": ""
+    }
+    
   }
 
   cargaUsuario(){
@@ -43,6 +53,22 @@ export class ExternoComponent implements OnInit {
         console.log(<any>error);
       }
   );
+
+  }
+
+  onSubmit(form){
+    this._PeticionesService.addUser(this.new_user).subscribe(
+
+      response => {
+        console.log(response);
+        form.reset();
+        },
+        error => {
+          console.log(<any>error);
+        }
+
+
+      )
 
   }
 

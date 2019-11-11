@@ -6,19 +6,28 @@ var bodyParser = require('body-parser');
 
 var app = express();
 
-//Configuracion de Rutas
-
+//Cargar configuracion de rutas
+var project_routes = require('./routes/project');
 
 //Middleware
 
 
 app.use(bodyParser.urlencoded({extended:false}));
-app.use(bodyParser.json());
+app.use(bodyParser.json()); 
 
 //CORS
 
 
 //Cargar RUTAS
+
+/*
+
+A partir de la creacion del modelo y del controlador 
+las rutas que aqui se escriben se comentan ya que se va a 
+usar el controlador.
+
+Inicio de las rutas
+
 app.get('/',(req, res)=>{
 	res.status(200).send(
 
@@ -48,6 +57,15 @@ app.post('/test',(req, res)=>{
 
 	});
 });
+
+Fin de la rutas
+*/
+
+
+//Rutas
+app.use('/api', project_routes);
+
+
 
 //Exportar 
 module.exports = app;

@@ -1,21 +1,32 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Portafolio Luis Hurtado</title>
-</head>
-<body>
-	<h4>Proyecto Portafolio Angular</h4>
+<nav class="navbar navbar-expand-lg navbar-light bg-light col-md-12">
+  <a class="navbar-brand" style="margin-left: 40px">Portafolio</a>
 
-	<ul>
-	    <li><a [routerLink]="['/about']">About</a></li>
-	    <li><a [routerLink]="['/contact']">Contact</a></li>
-	    <li><a [routerLink]="['/projects']">Projects</a></li>
-	    <li><a [routerLink]="['/create']">Create</a></li>
-	</ul>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-	<router-outlet></router-outlet>	
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup" style="margin-left: 40px">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link col-md-4" [routerLink]="['/about']" [routerLinkActive]="['active']">About</a>
+      <a class="nav-item nav-link col-md-4" [routerLink]="['/projects']" [routerLinkActive]="['active']">Projects</a>
+      <a class="nav-item nav-link col-md-4" [routerLink]="['/create']" [routerLinkActive]="['active']">Create</a>
+      <a class="nav-item nav-link col-md-4" [routerLink]="['/contact']" [routerLinkActive]="['active']">Contact</a>
+    </div>
+  </div>
+</nav>
 
-</body>
-</html>
+	
+<div class="container">
+	<router-outlet></router-outlet>
+</div>
+			
+	
+	
+
+	
+
+	<footer class="col-md-12 text-center" style="position: fixed;  bottom: 0; background: white">
+		Master en JavaScript &copy;
+	</footer>
 
 

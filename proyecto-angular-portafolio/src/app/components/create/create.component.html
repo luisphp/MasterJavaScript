@@ -1,1 +1,65 @@
-<p>create works!</p>
+
+<div class="container" style="margin-bottom: 50px;">
+
+	<h2 class="col-md-12 text-center">{{title}}</h2>
+
+	<div *ngIf="status == 'success'"  class="alert alert-success alert-dismissible fade show" role="alert">
+	  El project se ha guardado <strong>correctamente!!</strong>
+	  <span><a href="#" title="Click-Me"></a> (Ver proyecto)</span>
+	  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+	    <span aria-hidden="true">&times;</span>
+	  </button>
+	</div>
+	<div *ngIf="status == 'failed'"  class="alert alert-warning alert-dismissible fade show" role="alert">
+	  Error al guardar el proyecto <strong>correctamente!!</strong>
+	  
+	  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+	    <span aria-hidden="true">&times;</span>
+	  </button>
+	</div>
+
+	<br>
+
+		<form class="col-md-9 mx-auto" #projectForm="ngForm" (ngSubmit)="onSubmit(projectForm)">
+			
+		  <div class="form-group">
+
+		    <label for="name">Name</label>
+		    <input type="text" class="form-control" name="name" #name="ngModel" [(ngModel)]="project.name" required>
+		    <span *ngIf="name.touched && !name.valid" style="color: red">*</span>
+		  </div>
+
+		  <div class="form-group">
+		    <label for="description">Description</label>
+		    <textarea type="text" class="form-control" name="description" #description="ngModel" [(ngModel)]="project.description" required></textarea>
+		    <span *ngIf="description.touched && !description.valid" style="color: red">*</span>
+		  </div>
+
+		  <div class="form-group">
+		    <label for="category">Category</label>
+		    <input type="text" class="form-control" name="category" #category="ngModel" [(ngModel)]="project.category" required>
+		    <span *ngIf="category.touched && !category.valid" style="color: red">*</span>
+		  </div>
+		  
+		  <div class="form-group">
+		    <label for="year">Year</label>
+		    <input type="number" class="form-control" name="year" #year="ngModel" [(ngModel)]="project.year">
+		  </div>
+		  
+		  <div class="form-group">
+		    <label for="langs">Langs</label>
+		    <input type="text" class="form-control" name="langs" #langs="ngModel" [(ngModel)]="project.langs" required>
+		    <span *ngIf="langs.touched && !langs.valid" style="color: red">*</span>
+		  </div>
+		  
+		  <div class="custom-file">
+			<input type="file" class="custom-file-input" name="image" lang="en" (change)="fileChangeEvent($event)">
+			<label class="custom-file-label" for="image">Choose file</label>
+		  </div>
+
+		  <button  type="submit" class="col-md-3" type="submit" class="btn btn-primary" [disabled]="!projectForm.form.valid" style="margin-top: 30px;">Submit</button>
+		</form>
+
+</div>
+
+

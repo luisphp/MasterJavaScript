@@ -1,0 +1,22 @@
+.card
+{
+
+	transition: 0.5s;
+	text-decoration: none;
+}
+
+.card a:link {
+  color: black;
+}
+
+.card a:visited {
+  color: black;
+}
+
+.card:hover
+{
+	background: gray;
+	color: white;
+	transition: 0.5s;
+
+}

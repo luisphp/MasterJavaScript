@@ -1,3 +1,4 @@
+
 //Se importan las clases que vamos a utilizar
 import {ModuleWithProviders}  from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
@@ -8,6 +9,7 @@ import { ProjectsComponent } from './components/projects/projects.component';
 import { CreateComponent } from './components/create/create.component';
 import { ErrorComponent } from './components/error/error.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { DetailComponent } from './components/detail/detail.component';
 
 
 const appRoutes: Routes = [
@@ -17,6 +19,7 @@ const appRoutes: Routes = [
 	{path: 'contact', component: ContactComponent},
 	{path: 'projects', component: ProjectsComponent},
 	{path: 'create', component: CreateComponent},
+	{path: 'detail/:id', component: DetailComponent},
 	{path: '**', component: ErrorComponent},
 
 	

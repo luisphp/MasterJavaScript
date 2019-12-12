@@ -9,14 +9,15 @@
 ### Para iniciar este servidor con Node.js 
 
 - Utilizar el comando npm start
-- Utilizar el comando `npm run --watch` para ejecutar el listener de cambios de codigo y que se reflejen automaticamente en la web
+
+- (Opcional) Utilizar el comando `npm run --watch` para ejecutar el listener de cambios de codigo y que se reflejen automaticamente en la web
 
 ### MongoDb
 Aparte de eso tambien debes instalar MongoDB, RoboMongo, Robo3T al tener instalado esos programas
 debes iniciar la base de datos usando el comando `./mongod` en el directorio donde se instalo
 
 ### Nota
-Angtes de todo bebes crear en disco C una carpeta llamada db, en esa carpeta se guardan los archivos de la base de datos
+Antes de todo bebes crear en disco C una carpeta llamada db, en esa carpeta se guardan los archivos de la base de datos
 ![MongoDb command start][img2]
 
 

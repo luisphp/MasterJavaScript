@@ -15,16 +15,18 @@
 ### MongoDb
 Aparte de eso tambien debes instalar MongoDB, RoboMongo, Robo3T al tener instalado esos programas
 debes iniciar la base de datos usando el comando `./mongod` en el directorio donde se instalo
+![MongoDb command start][img1]
+
 
 ### Nota
 Antes de todo bebes crear en disco C una carpeta llamada db, en esa carpeta se guardan los archivos de la base de datos
-![MongoDb command start][img2]
+
 
 
 ### Ejecutar backend NodeJS
 
 - Usar el comando `npm start`, el mismo se configuro el archivo index.js
-![NodeJS command start][img1]
+![NodeJS command start][img2]
 
 
 [img1]: ./server-reference-images/MongoDB_Initial_command.PNG "NodeJS command start"

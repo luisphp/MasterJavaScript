@@ -48,7 +48,7 @@ export class ProjectService{
 
 				return this._http.get(this.url+'project/'+id, {headers: headers});
 			}
-			
+				
 
 	}
 

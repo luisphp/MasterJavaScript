@@ -1,23 +1,35 @@
-
 <div class="container-fluid" style="margin-bottom: 50px;">
+  <h2 class="col-md-12 text-center">{{title}}</h2>
+  <hr>
 
-	<h2 class="col-md-12 text-center">{{title}}</h2>
 
-	<br>
-
-	<div *ngFor="let project of projects" class="card mb-3">
-		<div class="card-header text-center"><h3> <a [routerLink]="['/detail', project._id]" title="Ver más!">{{project.name}}</a></h3></div>	
-  		<div class="card-body">
-  			<div class="col-md-6 mx-auto" style="background: transparent;">
-				<img class="mx-auto" src="{{url+'/get-image/'+project.image}}" title="{{project.name}}" *ngIf="project.image" style="max-width: 150px;">
-			</div>
-    	<h5 class="card-title text-right">Year: {{project.year}}</h5>
-    	<p class="card-text container text-justify">{{project.description}}</p>
-    	<hr>
-    	<h5>Categories:  <span class="badge badge-success">{{project.category}}</span></h5>
-    	<h5>Langs:  <span class="badge badge-primary">{{project.langs}}</span></h5>
-  	</div>
-
+<!--
+      <div *ngFor="let project of projects">
+        
+        
+      
+    </div>
+-->
+<div class="row mx-auto">
+  <div *ngFor="let project of projects" class="col-md-3 my-2">
+    <div class="card mx-auto">
+          <div class="card-header text-center"><h3> <a [routerLink]="['/detail', project._id]" title="Ver más!">{{project.name}}</a></h3>
+        </div>
+        <div class="card-body">
+          <div class="mx-auto" style="background: transparent;">
+            <img class="mx-auto" src="{{url+'/get-image/'+project.image}}" title="{{project.name}}" *ngIf="project.image" style="max-width: 150px;">
+          </div>
+          <h5 class="card-title text-right">Year: {{project.year}}</h5>
+          <p class="card-text container text-justify">{{project.description}}</p>
+          <hr>
+          <h5>Categories:  <span class="badge badge-success">{{project.category}}</span></h5>
+          <h5>Langs:  <span class="badge badge-primary">{{project.langs}}</span></h5>
+        </div>
+      </div>  
+  </div>
 
 </div>
 
+  
+
+</div>

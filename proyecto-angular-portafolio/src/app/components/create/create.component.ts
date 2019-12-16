@@ -16,7 +16,6 @@ export class CreateComponent implements OnInit {
 
 	public title: string;
 	public project: Project;
-
 	public status: string;
 	public filesToUpload: Array<File>;
 

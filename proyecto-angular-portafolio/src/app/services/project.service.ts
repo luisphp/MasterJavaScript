@@ -41,6 +41,7 @@ export class ProjectService{
 
 			}
 
+			//Servicio para mostrar el detalle de cada proyecto
 			getProject(id):Observable<any> {
 
 				let headers = new HttpHeaders().set('Content-Type', 'application/json');
@@ -48,8 +49,27 @@ export class ProjectService{
 
 				return this._http.get(this.url+'project/'+id, {headers: headers});
 			}
-				
 
-	}
+			//Borrar un proyecto
+			deleteProject(id):Observable<any> {
+
+				let headers = new HttpHeaders().set('Content-Type', 'application/json');
+
+				return this._http.delete(this.url+'project/'+id, {headers: headers});
+
+			}
+			//Actualizar un proyecto
+			updateProject(id):Observable<any>{
+
+				let params = JSON.stringify(project);
+
+				let headers = new HttpHeaders().set('Content-Type', 'application/json');
+
+				return this._http.put(this.url+'project/'+project._id, params, {headers: headers});
+
+			}
+
+
+}
 
 

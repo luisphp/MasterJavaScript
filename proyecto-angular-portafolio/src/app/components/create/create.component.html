@@ -51,6 +51,10 @@
 		    <input type="text" class="form-control" name="langs" #langs="ngModel" [(ngModel)]="project.langs" required>
 		    <span *ngIf="langs.touched && !langs.valid" style="color: red">*</span>
 		  </div>
+
+		  <div *ngIf="project.image">
+		  	<img src="{{url+'get-image/'+project.image}}" alt="" style="width: 100px;">
+		  </div>
 		  
 		  <div class="custom-file">
 			<input type="file" class="custom-file-input" name="image" lang="en" (change)="fileChangeEvent($event)">

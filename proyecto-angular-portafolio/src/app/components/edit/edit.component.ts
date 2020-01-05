@@ -18,6 +18,7 @@ export class EditComponent implements OnInit {
 	public project: Project;
 	public status: string;
 	public filesToUpload: Array<File>;
+	public url:string
 
   constructor(
 
@@ -30,6 +31,7 @@ export class EditComponent implements OnInit {
 
   	this.title = "Edit Project";
   	this.status = '';
+  	this.url = Global.url;
 
   }
 
@@ -42,8 +44,8 @@ export class EditComponent implements OnInit {
 	    })
 	  }
  
-		  getProject(id){
-		    this._projectService.getProject(id).subscribe(
+	getProject(id){
+		this._projectService.getProject(id).subscribe(
 		      response => {
 		        this.project = response.project
 		      },
@@ -52,6 +54,54 @@ export class EditComponent implements OnInit {
 		      }
 		    )
 		  }
+
+	onSubmit(form){
+
+  	//Guardar los Datos
+  	console.log(this.project);
+
+  	this._projectService.updateProject(this.project).subscribe(
+
+  		response => {
+
+  			if(response.project){
+  				console.log(response);
+  				
+  				
+
+
+  				//Subir imagen
+  				if(this.filesToUpload){
+
+  				this._uploadService.makeFileRequest(Global.url+'upload-image/'+response.project._id,[],this.filesToUpload, 'image')
+
+  				 .then((result: any)=>{
+  				 	//Se muestra un mensaje en la vista
+  				 	this.status = 'success';
+  				 		console.log(result);
+  				 		form.reset();
+  				 	});
+
+
+
+  				//Vaciar formuario
+  				form.reset();
+  				}
+  				 
+  			}
+  			else{
+  				//Se muetra un mensaje en la vista
+  				this.status = 'failed';
+  				
+  				//Vaciar formuario
+  				form.reset();
+  			}
+  			
+  			},
+  		err => {
+  			console.log(<any>err);
+  		});
+  }	  
 
 
   }

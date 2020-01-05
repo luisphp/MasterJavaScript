@@ -15,6 +15,7 @@ export class DetailComponent implements OnInit {
 
   public url: string;
   public project: Project;
+  public confirm: boolean;
 
   constructor(
 
@@ -24,6 +25,7 @@ export class DetailComponent implements OnInit {
   	) {
 
     this.url = Global.url;
+    this.confirm = false;
   	 }
 
   ngOnInit() {

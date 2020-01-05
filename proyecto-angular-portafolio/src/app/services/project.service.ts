@@ -59,7 +59,7 @@ export class ProjectService{
 
 			}
 			//Actualizar un proyecto
-			updateProject(id):Observable<any>{
+			updateProject(project: Project):Observable<any>{
 
 				let params = JSON.stringify(project);
 

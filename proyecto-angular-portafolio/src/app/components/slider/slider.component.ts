@@ -1,22 +1,45 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 declare var $:any;
 
 @Component({
-  selector: 'slider',
-  templateUrl: './slider.component.html',
-  styleUrls: ['./slider.component.css']
+selector: 'slider',
+templateUrl: './slider.component.html',
+styleUrls: ['./slider.component.css']
 })
+
 export class SliderComponent implements OnInit {
 
-  constructor() { }
+@Input() anchura: number;
+@Output() conseguirAuthor= new EventEmitter();
 
-  ngOnInit() {
-
-  	$(document).ready(function(){
-    $('.slider').bxSlider();
-  		});
+public author: any;
 
 
-  }
+
+constructor() { 
+
+	this.author = {
+		nombre : "Luis Hurtado",
+		website : "Luis.hurtado",
+		yotube : "esLuisDev"
+	}
+
+}
+ngOnInit() {
+	
+
+	$('.slider').bxSlider({
+		slideWidth: this.anchura
+		});
+
+	
+}
+	
+	lanzar(event){
+		console.log(event);
+		this.conseguirAuthor.emit(this.author);
+	}
+
+
 
 }

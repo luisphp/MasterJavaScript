@@ -1,17 +1,37 @@
-<h1> Contactos Nuevos </h1>
-<br>
 <div class="container" >
-	<input type="number" name="" [(ngModel)]="widthSlider" placeholder="Ingrese el tamaño del slider">
-	<div *ngIf="widthSlider">
-		<br>
-		Tamaño del Slider: <strong>{{widthSlider}}</strong>
+	<h1> Contactos Nuevos </h1>
+	<br>
 
+	<!--
+	<input type="number" name="" [(ngModel)]="widthSlider" placeholder="Ingrese el tamaño del slider" (keyup.enter)="cargarSlider()">
+	<div *ngIf="anchuraToSlider">
+		
+		<br>
+		<button class="btn btn-primary" (click)="cargarSlider()">Cargar slider</button>
+		<br>
+		<button class="btn btn-secondary" (click)="resetSlider()">Reset slider</button>
 		<br>
 
-		<slider></slider>	
+		
+		<slider [anchura]="anchuraToSlider"
+				(conseguirAuthor)="getAuthor($event)"
+
+
+		></slider>
+
+
+		Author: {{author.nombre}}
+	</div>
+
+-->
+
+	<div class="container">
+		<p>
+			Mandanos tus dudas usando esta sección:	
+		</p>
+		
+		
 	</div>
 	
 	
 </div>
-
-			

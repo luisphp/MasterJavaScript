@@ -25,7 +25,7 @@
             ],
             "styles": [
               "src/assets/css/styles.css",
-              "src/assets/bxslider/dist/jquery.bxslider.css"
+              "src/assets/bxslider/dist/jquery.bxslider.min.css"
 
             ],
             "scripts": [

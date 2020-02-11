@@ -5,7 +5,7 @@ var Project = require('../models/project');
 var fs = require('fs');
 
 var controller = {
-
+	//Métodos de pruebas del servidor
 	home: function(req, res){
 
 		return res.status(200).send({
@@ -70,7 +70,8 @@ var controller = {
 
 			});
 		},
-		//Metodo para mostrar proyecto en especifico
+	
+	//Metodo para mostrar proyecto en especifico
 	getAllProjects: function(req, res){
 
 		//Este es el query de mongoose . puede incluir Project.find().sort('-year') para ordenar de menor a mayor del año por ejemplo
@@ -86,6 +87,7 @@ var controller = {
 		});
 
 	},
+	
 	//Metodo para actualizar un proyecto
 	updateProject: function(req, res){
 
@@ -105,6 +107,7 @@ var controller = {
 		});
 
 	},
+
 	//Metodo para borrar un proyecto
 	deleteProject: function(req, res){
 
@@ -120,6 +123,7 @@ var controller = {
 			return res.status(200).send({ message: 'Proyecto borrado exitosamente!', project: projectRemoved});
 		});
 	},
+
 	uploadImage: function(req, res){
 
 		var projectId = req.params.id;
@@ -168,7 +172,7 @@ var controller = {
 				
 			});
 			*/
-		} else{
+		} else {
 
 			return res.status(200).send({
 				

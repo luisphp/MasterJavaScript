@@ -13,6 +13,5 @@ var ProjectSchema = Schema({
 });
 
 module.exports = mongoose.model('Project',ProjectSchema);
-//Esto guarda los datos en la collection projects de la base de datos en 
-//MongoDB.
+//Esto guarda los datos en la collection projects de la base de datos en MongoDB.
 

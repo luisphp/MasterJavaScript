@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 declare var $:any;
 
 @Component({
@@ -12,6 +12,8 @@ export class ContactComponent implements OnInit {
 	public anchuraToSlider: any;
   public author: any;
 
+  @ViewChild('textos') textos;
+
 	
 
   constructor() { }
@@ -23,14 +25,9 @@ export class ContactComponent implements OnInit {
   	$("#logo_principal").click(function(e){
   		e.preventDefault();
 
-  		if(idea === 1){
-  			$("html").css("background","black");
-  			idea = 0;
-  		}else{
-  			$("html").css("background","white");
-  			idea = 1;
-  		}
 			});
+
+    console.log(this.textos);
   }
   	cargarSlider(){
   		this.anchuraToSlider = null;

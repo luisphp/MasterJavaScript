@@ -1,4 +1,4 @@
-##Proyecto JS,
+## Proyecto JS,
 
 ### Descriocion
 Pagina estatica sencilla con cambiador de temas, esta funcionalidad fue ejecutada implementando JavaScript vainilla

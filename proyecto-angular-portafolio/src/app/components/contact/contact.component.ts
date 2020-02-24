@@ -12,7 +12,7 @@ export class ContactComponent implements OnInit {
 	public anchuraToSlider: any;
   public author: any;
 
-  @ViewChild('textos') textos;
+  @ViewChild('textos', {static: false}) textos;
 
 	
 

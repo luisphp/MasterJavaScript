@@ -1,27 +1,36 @@
-# ProyectoAngularPortafolio
+## Proyecto Angular- Portafolio Web - Single Page Application (SPA),
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.14.
+### Descripción
+Pagina web de tipo SPA Single Page Application, a modo de portafolio web con backend en NodeJS y base de datos en MongoDB, secciones: 
 
-## Development server
+- Principal (presentación de la web). 
+- Proyectos (donde se listan todos los proyectos).
+- CRUD Angular con MongoDB y NodeJS.
+- Formularios: Validación de formularios, listado de registros, vista de detalles de cada registro, Actualización y borrado de registros. 
+- Jquery para el slider de imagenes
+- CSS Bootstrap v.4
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Capturas de pantalla:
 
-## Code scaffolding
+<!DOCTYPE html>
+<html>
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+<body>
+	<!-- Images -->
+	<img src="Captures/Capture1.PNG" alt="" style="width= 400px;">
+	<img src="Captures/Capture2.PNG" alt="" style="width= 400px;">
+	<img src="Captures/Capture3.PNG" alt="" style="width= 400px;">
+</body>
+</html>
 
-## Build
+### Instrucciones para instalar
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+1. Clonar poyecto
+2. Mediante CMD ingresar a la carpeta MasterJavaScript > proyecto-angular-portafolio
+3. Ejecutar el comando `npm install` para instalar dependencia npm y seguido de `ng serve` para lanzar el servidor local
+4. Dirígete a la URL: http://localhost:4200/webpack-dev-server/
 
-## Running unit tests
+### Consideraciones
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Tener instalado MongoDB, NodeJS, Angular CLI y mantener ejecutandose el servidor NodeJS ubicado en la carpeta backend desde este mismo repositorio (MasterJavaScript > backend).
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

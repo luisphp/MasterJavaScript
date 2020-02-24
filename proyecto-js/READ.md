@@ -1,6 +1,6 @@
 ## Proyecto JS,
 
-### Descriocion
+### Descripción
 Pagina estatica sencilla con cambiador de temas, esta funcionalidad fue ejecutada implementando JavaScript vainilla
 Otros componentes como el slideshow fueron ejecutados mediante librerias externas como Jquery por ejemplo, el CSS es puro, sin frameworks.
 

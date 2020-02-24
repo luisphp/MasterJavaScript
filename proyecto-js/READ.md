@@ -6,8 +6,8 @@ Otros componentes como el slideshow fueron ejecutados mediante librerias externa
 
 ### Capturas de pantalla:
 
-	<img src="PJs-c1.PNG" alt="" style="width="400px"; ">
-	<img src="PJs-c2.PNG" alt="" style="width="400px"; ">
+	<img src="PJs-c1.PNG" alt="" style="width="400px";>
+	<img src="PJs-c2.PNG" alt="" style="width="400px";>
 
 
 ### Link del proyecto en Firebase: https://lhsite-1966d.web.app/index.html

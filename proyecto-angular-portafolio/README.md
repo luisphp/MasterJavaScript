@@ -16,9 +16,10 @@ Página web de tipo SPA (Single Page Application), a modo de portafolio web con 
 <html>
 <body>
 	<!-- Images -->
-	<img src="Captures/Capture1.PNG" alt="" style="width= 400px;">
-	<img src="Captures/Capture2.PNG" alt="" style="width= 400px;">
-	<img src="Captures/Capture3.PNG" alt="" style="width= 400px;">
+	<img src="Captures/Captura1.PNG" alt="" style="width= 400px;">
+	<img src="Captures/Captura2.PNG" alt="" style="width= 400px;">
+	<img src="Captures/Captura3.PNG" alt="" style="width= 400px;">
+	<img src="Captures/Captura4.PNG" alt="" style="width= 400px;">
 </body>
 </html>
 

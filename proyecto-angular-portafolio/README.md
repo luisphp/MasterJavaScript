@@ -32,5 +32,6 @@ Página web de tipo SPA (Single Page Application), a modo de portafolio web con 
 
 ### Consideraciones:
 
-Tener instalado MongoDB, NodeJS, Angular CLI y mantener ejecutandose el servidor NodeJS ubicado en la carpeta backend desde este mismo repositorio (MasterJavaScript > backend).
+Tener instalado MongoDB, NodeJS, Angular CLI y mantener ejecutandose el servidor NodeJS ubicado en la carpeta backend desde este mismo repositorio [MasterJavaScript > backend](https://github.com/luisphp/MasterJavaScript/tree/master/backend).
+
 

@@ -1,3 +1,7 @@
+# Backend Rest hecho con NodeJS
+
+### Este proyecto es un backend hecho con NodeJS que comunica con el proyecto portafolio de este mismo repositorio [Proyecto portafolio](https://github.com/luisphp/MasterJavaScript/tree/master/proyecto-angular-portafolio)
+
 ### Para instalar y ejecutar este servidor debes instalar las siguientes librerias y dependencias
 
 - `npm install express --save`
